@@ -17,8 +17,8 @@ const TemplateWrapper = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     /> */}
-    <SiteWrapper>
     <Header />
+    <SiteWrapper>
       <MainMenu menu={data} />
       {children()}
     </SiteWrapper>
