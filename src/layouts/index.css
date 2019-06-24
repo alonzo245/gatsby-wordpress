@@ -626,12 +626,12 @@ pre tt:after {
 /* Fonts */
 @font-face {
     font-family: 'Orion-Regular';
-    src: url(../public/assets/fonts/Orion-Regular.woff);
+    src: url(../../public/assets/fonts/Orion-Regular.woff);
   }
   
   @font-face {
     font-family: 'Orion-Bold';
-    src: url(../public/assets/fonts/Orion-Bold.woff) format('woff');
+    src: url(../../public/assets/fonts/Orion-Bold.woff) format('woff');
   }
   
   * {
