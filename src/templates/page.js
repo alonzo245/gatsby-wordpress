@@ -1,4 +1,5 @@
 import React, {Component} from "react"
+import Article from '../components/containers/Article/Article'
 
 class PageTemplate extends Component {
     render() {
@@ -8,15 +9,16 @@ class PageTemplate extends Component {
         console.log(currentPage)
 
         return (
-            <div>
-                <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
-                <h1 dangerouslySetInnerHTML={{__html: currentPage.guid}}/>
-                <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
+            <Article article={currentPage} /> 
+            // <div>
+            //     <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
+            //     <h1 dangerouslySetInnerHTML={{__html: currentPage.guid}}/>
+            //     <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
 
-                <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
-                <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
-                <p>facebook = {currentPage.acf.facebook && currentPage.acf.facebook}</p> 
-            </div>
+            //     <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
+            //     <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
+            //     <p>facebook = {currentPage.acf && currentPage.acf.facebook}</p> 
+            // </div>
         )
     }
 }

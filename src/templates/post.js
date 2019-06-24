@@ -10,20 +10,20 @@ class PostTemplate extends Component {
 
         // console.log(resolutions)
 
-        let facebook = ''
-        let twitter = ''
+        // let facebook = post.acf || post.acf || 'null'
+        // let twitter = post.acf || post.acf.twitter || 'null2'
 
-        if(post.acf !== null) {
+        // if(post.acf !== null) {
 
-            if(post.acf.facebook !== '') {
-                facebook = `<h3>Facebook</h3> ${post.acf.facebook}`
-            }
+        //     if(post.acf.facebook !== '') {
+        //         facebook = `<h3>Facebook</h3> ${post.acf.facebook}`
+        //     }
 
-            if(post.acf.twitter !== '') {
-                twitter = `<h3>Twitter</h3> ${post.acf.twitter}`
-            }
+        //     if(post.acf.twitter !== '') {
+        //         twitter = `<h3>Twitter</h3> ${post.acf.twitter}`
+        //     }
 
-        }
+        // }
 
         return (
             <div>
@@ -38,8 +38,9 @@ class PostTemplate extends Component {
 
                 <div dangerouslySetInnerHTML={{ __html: post.content }} />
 
-                <div dangerouslySetInnerHTML={{__html: facebook}}></div>
-                <div dangerouslySetInnerHTML={{__html: twitter}}></div>
+                {/* <div dangerouslySetInnerHTML={{__html: facebook}}></div>
+                <div dangerouslySetInnerHTML={{__html: twitter}}></div> */}
+                {/* <div dangerouslySetInnerHTML={{__html: facebook}></div> */}
 
                 {/*{post.acf !== null &&
                     <div>
