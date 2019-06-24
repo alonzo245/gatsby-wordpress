@@ -6,20 +6,11 @@ class PageTemplate extends Component {
         const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressPage
 
-        console.log(currentPage)
+        console.log('aaaa')
+        console.log(this.props.pathContext.suggestedArticles)
+        // console.log(this.props.menu.allWordpressWpApiMenusMenusItems.edges[0].node.items.slice(0,3))
 
-        return (
-            <Article article={currentPage} /> 
-            // <div>
-            //     <h1 dangerouslySetInnerHTML={{__html: currentPage.title}}/>
-            //     <h1 dangerouslySetInnerHTML={{__html: currentPage.guid}}/>
-            //     <div dangerouslySetInnerHTML={{__html: currentPage.content}}/>
-
-            //     <p dangerouslySetInnerHTML={{__html: currentPage.date}} />
-            //     <p dangerouslySetInnerHTML={{__html: currentPage.slug}} />
-            //     <p>facebook = {currentPage.acf && currentPage.acf.facebook}</p> 
-            // </div>
-        )
+        return <Article article={currentPage} suggestedArticles={this.props.pathContext.suggestedArticles} /> 
     }
 }
 
@@ -45,5 +36,7 @@ export const pageQuery = graphql`
                 subtitle
             }
         }
+
+        
     }
 `

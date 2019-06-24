@@ -18,7 +18,7 @@ const Content = (props) => {
 
       <article className="content">
         <br />
-        {console.log(props)}
+        {/* {console.log(props)} */}
         <br />
         {/* <img className="articleImage" src={`https${props.article.content}?alt=media`} alt="" key={i} /> */}
         <strong>{props.article.title}</strong>

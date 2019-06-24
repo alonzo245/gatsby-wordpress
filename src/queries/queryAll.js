@@ -2,19 +2,29 @@
 
 module.exports = `
     {
-        allWordpressPage {
+        allWordpressPage(sort: {fields: [date], order: ASC}) {
             edges {
-                node {
+              node {
+                id
+                slug
+                status
+                template
+                link
+                date
+                title
+                content
+                parent {
+                  id
+                  children {
                     id
-                    slug
-                    status
-                    template
-                    acf{
-                        facebook
-                      }
+                  }
                 }
+                acf {
+                  facebook
+                }
+              }
             }
-        }
+          }
         
         allWordpressPost {
             edges {

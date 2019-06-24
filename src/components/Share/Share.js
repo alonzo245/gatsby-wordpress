@@ -26,8 +26,8 @@ class Share extends Component {
         return (
             
             <section className="share">
-                {console.log('siteConfig', siteConfig)}
-                {console.log('sare', this.props)}
+                {/* {console.log('siteConfig', siteConfig)} */}
+                {/* {console.log('sare', this.props)} */}
                 <h2>
                      שיתוף כתבה
                 </h2>

@@ -19,6 +19,8 @@ const TemplateWrapper = ({ children, data }) => (
     /> */}
     <Header />
     <SiteWrapper>
+      {console.log(data)}
+      {/* {console.log('mmmm',data.allWordpressWpApiMenusMenusItems.edges[0].node.items.slice(0,3))} */}
       <MainMenu menu={data} />
       {children()}
     </SiteWrapper>

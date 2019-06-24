@@ -8,6 +8,7 @@ module.exports = {
         subtitle: `Fetch Data From Local WP Install`,
     },
     plugins: [
+        // 
         // 'gatsby-plugin-react-helmet',
         {
             resolve: "gatsby-source-wordpress",
@@ -21,6 +22,7 @@ module.exports = {
         },
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
+        // 'gatsby-plugin-i18n',
         
     ],
 };

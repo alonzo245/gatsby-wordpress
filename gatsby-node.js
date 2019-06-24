@@ -24,10 +24,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                 pages.forEach(edge => {
                     console.log('edge', edge)
                     createPage({
-                        path: `/${edge.node.slug}/`,
+                        path: `/${edge.node.title}/`,
                         component: pageTemplate,
                         context: {
                             id: edge.node.id,
+                            suggestedArticles: pages.slice(1,3),
                         },
                     })
                 })

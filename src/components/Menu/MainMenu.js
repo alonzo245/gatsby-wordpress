@@ -3,7 +3,8 @@ import Link from "gatsby-link"
 import Sidebar from "react-sidebar";
 import styles from "./styles";
 
-const mql = window.matchMedia(`(min-width: 800px)`);
+const mql = false;
+// const mql = window.matchMedia(`(min-width: 800px)`);
 
 class MainMenu extends Component {
     constructor(props) {
@@ -18,11 +19,11 @@ class MainMenu extends Component {
     }
 
     componentWillMount() {
-        mql.addListener(this.mediaQueryChanged);
+        // mql.addListener(this.mediaQueryChanged);
     }
 
     componentWillUnmount() {
-        this.state.mql.removeListener(this.mediaQueryChanged);
+        // this.state.mql.removeListener(this.mediaQueryChanged);
     }
 
     onSetSidebarOpen(open) {
@@ -34,7 +35,7 @@ class MainMenu extends Component {
     }
 
     render() {
-
+// console.log(this.props.menu.allWordpressWpApiMenusMenusItems.edges[0].node.items.slice(0,3))
         const data = this.props.menu.allWordpressWpApiMenusMenusItems.edges[0].node.items
 
         const sideBarContent = (
@@ -43,7 +44,7 @@ class MainMenu extends Component {
                     {data.map((item) =>
 
                         <li key={item.object_slug}>
-                            {console.log('item', item)}
+                            {/* {console.log('item', item)} */}
                             <Link to={item.url}>
                                 {item.title}
                             </Link>
