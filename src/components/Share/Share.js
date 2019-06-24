@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Share.scss';
+import './Share.css';
 
 import {
     FacebookShareButton,
@@ -28,32 +28,32 @@ class Share extends Component {
                      שיתוף כתבה
                 </h2>
                 <ul>
-                    <li><WhatsappShareButton url={window.location.href} >
+                    <li><WhatsappShareButton url={this.props.link} >
                         <WhatsappIcon size={32} round={true} />
                     </WhatsappShareButton>
                     </li>
                     <li><FacebookShareButton 
                     hashtag={'#pepper'}
-                    url={window.location.href} >
+                    url={this.props.link} >
                         <FacebookIcon size={32} round={true} />
                     </FacebookShareButton>
                     </li>
-                    <li><TelegramShareButton url={window.location.href} >
+                    <li><TelegramShareButton url={this.props.link} >
                         <TelegramIcon size={32} round={true} />
                     </TelegramShareButton>
                     </li>
-                    <li><TwitterShareButton url={window.location.href} >
+                    <li><TwitterShareButton url={this.props.link} >
                         <TwitterIcon size={32} round={true} />
                     </TwitterShareButton>
                     </li>
-                    <li><LinkedinShareButton url={window.location.href} >
+                    <li><LinkedinShareButton url={this.props.link} >
                         <LinkedinIcon size={32} round={true} />
                     </LinkedinShareButton>
                     </li>
                     <li><EmailShareButton 
                     subject={ `Pepper Bank - ${this.props.article.metaTagTitle}`}
-                    body={ `${window.location.href} \n ${this.props.article.summary}`}
-                    url={window.location.href} >
+                    body={ `${this.props.link} \n ${this.props.article.summary}`}
+                    url={this.props.link} >
                         <EmailIcon size={32} round={true} />
                     </EmailShareButton>
                     </li>

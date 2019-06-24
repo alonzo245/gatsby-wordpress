@@ -1,0 +1,52 @@
+.share {
+    padding: 0 25px 20px 25px;
+    overflow: hidden;
+
+}
+
+@media (min-width: 900px) {
+    .share {
+        padding: 0 25px 20px 25px;
+        overflow: hidden;
+        padding: 0;
+    }
+}
+
+.share h2 {
+    color: #7f90a5;
+    font-size: 0.9rem;
+    padding: 30px 0 20px 0;
+    font-family: Orion-Bold, sans-serif;
+}
+
+
+@media (min-width: 900px) {
+    .share h2 {
+        color: #7f90a5;
+        font-size: 0.9rem;
+        padding: 30px 0 20px 0;
+        font-family: Orion-Bold, sans-serif;
+        margin: 0px auto;
+        max-width: 650px;
+        padding: 30px 0 0px 0;
+    }
+}
+
+.share ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 19px 0px;
+}
+
+.share ul li {
+    padding: 0 5px;
+    cursor: pointer; 
+}
+
+.share ul li div {
+    outline: none;
+}

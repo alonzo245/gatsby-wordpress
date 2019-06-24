@@ -1,5 +1,5 @@
 import React from 'react';
-import './Content.scss';
+import './Content.css';
 
 const getKeyByValue = (object, value) => {
   return Object.keys(object).find(key => object[key] === value);
